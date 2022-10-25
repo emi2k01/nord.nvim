@@ -31,19 +31,19 @@ theme.loadSyntax = function()
 		Debug = { fg = nord.nord11_gui }, -- debugging statements
 		Underlined = { fg = nord.nord14_gui, bg = nord.none, style = "underline" }, -- text that stands out, HTML links
 		Ignore = { fg = nord.nord1_gui }, -- left blank, hidden
-		Error = { fg = nord.nord11_gui, bg = nord.none, style = "bold,underline" }, -- any erroneous construct
-		Todo = { fg = nord.nord13_gui, bg = nord.none, style = "bold,italic" }, -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+		Error = { fg = nord.nord11_gui, bg = nord.none, style = "underline" }, -- any erroneous construct
+		Todo = { fg = nord.nord13_gui, bg = nord.none, style = "italic" }, -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 		Conceal = { fg = nord.none, bg = nord.nord0_gui },
 
 		htmlLink = { fg = nord.nord14_gui, style = "underline" },
-		htmlH1 = { fg = nord.nord8_gui, style = "bold" },
-		htmlH2 = { fg = nord.nord11_gui, style = "bold" },
-		htmlH3 = { fg = nord.nord14_gui, style = "bold" },
-		htmlH4 = { fg = nord.nord15_gui, style = "bold" },
-		htmlH5 = { fg = nord.nord9_gui, style = "bold" },
-		markdownH1 = { fg = nord.nord8_gui, style = "bold" },
-		markdownH2 = { fg = nord.nord11_gui, style = "bold" },
-		markdownH3 = { fg = nord.nord14_gui, style = "bold" },
+		htmlH1 = { fg = nord.nord8_gui },
+		htmlH2 = { fg = nord.nord11_gui },
+		htmlH3 = { fg = nord.nord14_gui },
+		htmlH4 = { fg = nord.nord15_gui },
+		htmlH5 = { fg = nord.nord9_gui },
+		markdownH1 = { fg = nord.nord8_gui },
+		markdownH2 = { fg = nord.nord11_gui },
+		markdownH3 = { fg = nord.nord14_gui },
 		markdownH1Delimiter = { fg = nord.nord8_gui },
 		markdownH2Delimiter = { fg = nord.nord11_gui },
 		markdownH3Delimiter = { fg = nord.nord14_gui },
@@ -89,7 +89,7 @@ theme.loadEditor = function()
 		IncSearch = { fg = nord.nord6_gui, bg = nord.nord10_gui },
 		LineNr = { fg = nord.nord3_gui_bright },
 		CursorLineNr = { fg = nord.nord4_gui },
-		MatchParen = { fg = nord.nord15_gui, bg = nord.none, style = "bold" },
+		MatchParen = { fg = nord.nord15_gui, bg = nord.none },
 		ModeMsg = { fg = nord.nord4_gui },
 		MoreMsg = { fg = nord.nord4_gui },
 		NonText = { fg = nord.nord1_gui },
@@ -113,15 +113,15 @@ theme.loadEditor = function()
 		TabLineFill = { fg = nord.nord4_gui, bg = nord.none },
 		TablineSel = { fg = nord.nord1_gui, bg = nord.nord9_gui },
 		Tabline = { fg = nord.nord4_gui, bg = nord.nord1_gui },
-		Title = { fg = nord.nord14_gui, bg = nord.none, style = "bold" },
+		Title = { fg = nord.nord14_gui, bg = nord.none },
 		Visual = { fg = nord.none, bg = nord.nord2_gui },
 		VisualNOS = { fg = nord.none, bg = nord.nord2_gui },
 		WarningMsg = { fg = nord.nord15_gui },
-		WildMenu = { fg = nord.nord12_gui, bg = nord.none, style = "bold" },
+		WildMenu = { fg = nord.nord12_gui, bg = nord.none },
 		CursorColumn = { fg = nord.none, bg = nord.cursorlinefg },
 		CursorLine = { fg = nord.none, bg = nord.cursorlinefg },
 		ToolbarLine = { fg = nord.nord4_gui, bg = nord.nord1_gui },
-		ToolbarButton = { fg = nord.nord4_gui, bg = nord.none, style = "bold" },
+		ToolbarButton = { fg = nord.nord4_gui, bg = nord.none },
 		NormalMode = { fg = nord.nord4_gui, bg = nord.none, style = "reverse" },
 		InsertMode = { fg = nord.nord14_gui, bg = nord.none, style = "reverse" },
 		ReplacelMode = { fg = nord.nord11_gui, bg = nord.none, style = "reverse" },
@@ -248,11 +248,11 @@ theme.loadTreeSitter = function()
 		TSNumber = { fg = nord.nord15_gui }, -- For all number
 
 		TSAttribute = { fg = nord.nord15_gui }, -- (unstable) TODO: docs
-		TSVariable = { fg = nord.nord4_gui, style = "bold" }, -- Any variable name that does not have another highlight.
-		TSVariableBuiltin = { fg = nord.nord4_gui, style = "bold" },
-		TSBoolean = { fg = nord.nord9_gui, style = "bold" }, -- For booleans.
-		TSConstBuiltin = { fg = nord.nord7_gui, style = "bold" }, -- For constant that are built in the language: `nil` in Lua.
-		TSConstMacro = { fg = nord.nord7_gui, style = "bold" }, -- For constants that are defined by macros: `NULL` in C.
+		TSVariable = { fg = nord.nord4_gui }, -- Any variable name that does not have another highlight.
+		TSVariableBuiltin = { fg = nord.nord4_gui },
+		TSBoolean = { fg = nord.nord9_gui }, -- For booleans.
+		TSConstBuiltin = { fg = nord.nord7_gui }, -- For constant that are built in the language: `nil` in Lua.
+		TSConstMacro = { fg = nord.nord7_gui }, -- For constants that are defined by macros: `NULL` in C.
 		TSError = { fg = nord.nord11_gui }, -- For syntax/parser errors.
 		TSException = { fg = nord.nord15_gui }, -- For exception related keywords.
 		TSFuncMacro = { fg = nord.nord7_gui }, -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
@@ -273,7 +273,7 @@ theme.loadTreeSitter = function()
 		TSTextReference = { fg = nord.nord15_gui }, -- FIXME
 		TSEmphasis = { fg = nord.nord10_gui }, -- For text to be represented with emphasis.
 		TSUnderline = { fg = nord.nord4_gui, bg = nord.none, style = "underline" }, -- For text to be represented with an underline.
-		TSTitle = { fg = nord.nord10_gui, bg = nord.none, style = "bold" }, -- Text that is part of a title.
+		TSTitle = { fg = nord.nord10_gui, bg = nord.none }, -- Text that is part of a title.
 		TSLiteral = { fg = nord.nord4_gui }, -- Literal text.
 		TSURI = { fg = nord.nord14_gui }, -- Any URI like a link or email.
 		TSAnnotation = { fg = nord.nord11_gui }, -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
@@ -283,12 +283,12 @@ theme.loadTreeSitter = function()
 		["@float"] = { fg = nord.nord15_gui },
 		["@number"] = { fg = nord.nord15_gui },
 		["@attribute"] = { fg = nord.nord15_gui },
-		["@variable"] = { fg = nord.nord4_gui, style = "bold" },
-		["@variable.builtin"] = { fg = nord.nord4_gui, style = "bold" },
-		["@variable.global"] = { fg = nord.nord4_gui, style = "bold" },
-		["@boolean"] = { fg = nord.nord9_gui, style = "bold" },
-		["@constant.builtin"] = { fg = nord.nord7_gui, style = "bold" },
-		["@constant.macro"] = { fg = nord.nord7_gui, style = "bold" },
+		["@variable"] = { fg = nord.nord4_gui },
+		["@variable.builtin"] = { fg = nord.nord4_gui },
+		["@variable.global"] = { fg = nord.nord4_gui },
+		["@boolean"] = { fg = nord.nord9_gui },
+		["@constant.builtin"] = { fg = nord.nord7_gui },
+		["@constant.macro"] = { fg = nord.nord7_gui },
 		["@error"] = { fg = nord.nord11_gui },
 		["@exception"] = { fg = nord.nord15_gui },
 		["@funtion.macro"] = { fg = nord.nord7_gui },
@@ -308,8 +308,8 @@ theme.loadTreeSitter = function()
 		["@text.reference"] = { fg = nord.nord15_gui },
 		["@text.emphasis"] = { fg = nord.nord10_gui },
 		["@text.underline"] = { fg = nord.nord4_gui, bg = nord.none, style = "underline" },
-		["@text.title"] = { fg = nord.nord10_gui, bg = nord.none, style = "bold" },
-		["@text.strong"] = { fg = nord.nord10_gui, bg = nord.none, style = "bold" },
+		["@text.title"] = { fg = nord.nord10_gui, bg = nord.none },
+		["@text.strong"] = { fg = nord.nord10_gui, bg = nord.none },
 		["@text.literal"] = { fg = nord.nord4_gui },
 		["@text.uri"] = { fg = nord.nord14_gui },
 
@@ -531,7 +531,7 @@ theme.loadPlugins = function()
 		GitSignsDelete = { fg = nord.nord11_gui }, -- diff mode: Deleted line |diff.txt|
 		GitSignsDeleteNr = { fg = nord.nord11_gui }, -- diff mode: Deleted line |diff.txt|
 		GitSignsDeleteLn = { fg = nord.nord11_gui }, -- diff mode: Deleted line |diff.txt|
-		GitSignsCurrentLineBlame = { fg = nord.nord3_gui_bright, style = "bold" },
+		GitSignsCurrentLineBlame = { fg = nord.nord3_gui_bright },
 
 		-- Telescope
 		TelescopePromptBorder = { fg = nord.nord8_gui },
@@ -542,7 +542,7 @@ theme.loadPlugins = function()
 		TelescopeMatching = { fg = nord.nord8_gui },
 
 		-- NvimTree
-		NvimTreeRootFolder = { fg = nord.nord7_gui, style = "bold" },
+		NvimTreeRootFolder = { fg = nord.nord7_gui },
 		NvimTreeGitDirty = { fg = nord.nord15_gui },
 		NvimTreeGitNew = { fg = nord.nord14_gui },
 		NvimTreeImageFile = { fg = nord.nord15_gui },
@@ -558,7 +558,7 @@ theme.loadPlugins = function()
 		LspDiagnosticsHint = { fg = nord.nord9_gui },
 
 		-- WhichKey
-		WhichKey = { fg = nord.nord4_gui, style = "bold" },
+		WhichKey = { fg = nord.nord4_gui },
 		WhichKeyGroup = { fg = nord.nord4_gui },
 		WhichKeyDesc = { fg = nord.nord7_gui, style = "italic" },
 		WhichKeySeperator = { fg = nord.nord4_gui },
@@ -594,8 +594,8 @@ theme.loadPlugins = function()
 
 		-- Cmp
 		CmpItemKind = { fg = nord.nord15_gui },
-		CmpItemAbbrMatch = { fg = nord.nord5_gui, style = "bold" },
-		CmpItemAbbrMatchFuzzy = { fg = nord.nord5_gui, style = "bold" },
+		CmpItemAbbrMatch = { fg = nord.nord5_gui },
+		CmpItemAbbrMatchFuzzy = { fg = nord.nord5_gui },
 		CmpItemAbbr = { fg = nord.nord4_gui },
 		CmpItemMenu = { fg = nord.nord14_gui },
 
@@ -605,16 +605,16 @@ theme.loadPlugins = function()
 
 		-- headline
 		-- bg = (10 * nord0 + fg) / 11
-		Headline1 = { fg = nord.nord12_gui, bg = "#3d3c44", bold = true },
-		Headline2 = { fg = nord.nord13_gui, bg = "#3f4247", bold = true },
-		Headline3 = { fg = nord.nord14_gui, bg = "#394147", bold = true },
-		Headline4 = { fg = nord.nord9_gui, bg = "#363e4c", bold = true },
-		Headline5 = { fg = nord.nord15_gui, bg = "#3a3c4a", bold = true },
-		Headline6 = { fg = nord.nord4_gui, bg = "#3d434f", bold = true },
+		Headline1 = { fg = nord.nord12_gui, bg = "#3d3c44" },
+		Headline2 = { fg = nord.nord13_gui, bg = "#3f4247" },
+		Headline3 = { fg = nord.nord14_gui, bg = "#394147" },
+		Headline4 = { fg = nord.nord9_gui, bg = "#363e4c" },
+		Headline5 = { fg = nord.nord15_gui, bg = "#3a3c4a" },
+		Headline6 = { fg = nord.nord4_gui, bg = "#3d434f" },
 
 		Quote = { fg = nord.nord2_gui },
 		CodeBlock = { bg = nord.nord1_gui },
-		Dash = { nord.nord10_gui, bold = true },
+		Dash = { nord.nord10_gui },
 
 		-- Illuminate
 		illuminatedWord = { bg = nord.nord3_gui },
@@ -646,8 +646,8 @@ theme.loadPlugins = function()
 		DapUIBreakpointsLine = { fg = nord.nord8_gui },
 
 		-- Hop
-		HopNextKey = { fg = nord.nord4_gui, style = "bold" },
-		HopNextKey1 = { fg = nord.nord8_gui, style = "bold" },
+		HopNextKey = { fg = nord.nord4_gui },
+		HopNextKey1 = { fg = nord.nord8_gui },
 		HopNextKey2 = { fg = nord.nord4_gui },
 		HopUnmatched = { fg = nord.nord3_gui },
 
@@ -664,17 +664,17 @@ theme.loadPlugins = function()
 		rainbowcol7 = { fg = nord.nord13_gui },
 
 		-- lightspeed
-		LightspeedLabel = { fg = nord.nord8_gui, style = "bold" },
-		LightspeedLabelOverlapped = { fg = nord.nord8_gui, style = "bold,underline" },
-		LightspeedLabelDistant = { fg = nord.nord15_gui, style = "bold" },
-		LightspeedLabelDistantOverlapped = { fg = nord.nord15_gui, style = "bold,underline" },
-		LightspeedShortcut = { fg = nord.nord10_gui, style = "bold" },
-		LightspeedShortcutOverlapped = { fg = nord.nord10_gui, style = "bold,underline" },
-		LightspeedMaskedChar = { fg = nord.nord4_gui, bg = nord.nord2_gui, style = "bold" },
+		LightspeedLabel = { fg = nord.nord8_gui },
+		LightspeedLabelOverlapped = { fg = nord.nord8_gui, style = "underline" },
+		LightspeedLabelDistant = { fg = nord.nord15_gui },
+		LightspeedLabelDistantOverlapped = { fg = nord.nord15_gui, style = "underline" },
+		LightspeedShortcut = { fg = nord.nord10_gui },
+		LightspeedShortcutOverlapped = { fg = nord.nord10_gui, style = "underline" },
+		LightspeedMaskedChar = { fg = nord.nord4_gui, bg = nord.nord2_gui },
 		LightspeedGreyWash = { fg = nord.nord3_gui_bright },
 		LightspeedUnlabeledMatch = { fg = nord.nord4_gui, bg = nord.nord1_gui },
-		LightspeedOneCharMatch = { fg = nord.nord8_gui, style = "bold,reverse" },
-		LightspeedUniqueChar = { style = "bold,underline" },
+		LightspeedOneCharMatch = { fg = nord.nord8_gui, style = "reverse" },
+		LightspeedUniqueChar = { style = "underline" },
 
 		-- copilot
 		CopilotLabel = { fg = nord.nord3_gui, bg = nord.none },
@@ -694,7 +694,7 @@ theme.loadPlugins = function()
 
 		MiniJump = { fg = nord.nord0_gui, bg = nord.nord4_gui },
 
-		MiniJump2dSpot = { fg = nord.nord12_gui, style = "bold,nocombine" },
+		MiniJump2dSpot = { fg = nord.nord12_gui, style = "nocombine" },
 
 		MiniStarterCurrent = { style = "nocombine" },
 		MiniStarterFooter = { fg = nord.nord14_gui, style = "italic" },
@@ -709,13 +709,13 @@ theme.loadPlugins = function()
 		MiniStatuslineDevinfo = { fg = nord.nord4_gui, bg = nord.nord2_gui },
 		MiniStatuslineFileinfo = { fg = nord.nord4_gui, bg = nord.nord2_gui },
 		MiniStatuslineFilename = { fg = nord.nord4_gui, bg = nord.nord1_gui },
-		MiniStatuslineInactive = { fg = nord.nord4_gui, bg = nord.nord0_gui, style = "bold" },
-		MiniStatuslineModeCommand = { fg = nord.nord0_gui, bg = nord.nord15_gui, style = "bold" },
-		MiniStatuslineModeInsert = { fg = nord.nord1_gui, bg = nord.nord4_gui, style = "bold" },
-		MiniStatuslineModeNormal = { fg = nord.nord1_gui, bg = nord.nord9_gui, style = "bold" },
-		MiniStatuslineModeOther = { fg = nord.nord0_gui, bg = nord.nord13_gui, style = "bold" },
-		MiniStatuslineModeReplace = { fg = nord.nord0_gui, bg = nord.nord11_gui, style = "bold" },
-		MiniStatuslineModeVisual = { fg = nord.nord0_gui, bg = nord.nord7_gui, style = "bold" },
+		MiniStatuslineInactive = { fg = nord.nord4_gui, bg = nord.nord0_gui },
+		MiniStatuslineModeCommand = { fg = nord.nord0_gui, bg = nord.nord15_gui },
+		MiniStatuslineModeInsert = { fg = nord.nord1_gui, bg = nord.nord4_gui },
+		MiniStatuslineModeNormal = { fg = nord.nord1_gui, bg = nord.nord9_gui },
+		MiniStatuslineModeOther = { fg = nord.nord0_gui, bg = nord.nord13_gui },
+		MiniStatuslineModeReplace = { fg = nord.nord0_gui, bg = nord.nord11_gui },
+		MiniStatuslineModeVisual = { fg = nord.nord0_gui, bg = nord.nord7_gui },
 
 		MiniSurround = { link = "IncSearch" },
 
@@ -728,9 +728,8 @@ theme.loadPlugins = function()
 		MiniTablineTabpagesection = { fg = nord.nord10_gui, bg = nord.nord6_gui, style = "reverse,bold" },
 		MiniTablineVisible = { bg = nord.nord2_gui },
 
-		MiniTestEmphasis = { style = "bold" },
-		MiniTestFail = { fg = nord.nord11_gui, style = "bold" },
-		MiniTestPass = { fg = nord.nord14_gui, style = "bold" },
+		MiniTestFail = { fg = nord.nord11_gui },
+		MiniTestPass = { fg = nord.nord14_gui },
 
 		MiniTrailspace = { bg = nord.nord11_gui },
 
@@ -739,7 +738,7 @@ theme.loadPlugins = function()
 		AerialLineNC = { bg = nord.nord2_gui },
 
 		AerialArrayIcon = { fg = nord.nord13_gui },
-		AerialBooleanIcon = { fg = nord.nord9_gui, style = "bold" },
+		AerialBooleanIcon = { fg = nord.nord9_gui },
 		AerialClassIcon = { fg = nord.nord9_gui },
 		AerialConstansIcon = { fg = nord.nord13_gui },
 		AerialConstructorIcon = { fg = nord.nord9_gui },
@@ -765,10 +764,10 @@ theme.loadPlugins = function()
 		AerialStringIcon = vim.g.nord_italic and { fg = nord.nord14_gui, style = "italic" } or { fg = nord.nord14_gui },
 		AerialStructIcon = { fg = nord.nord9_gui },
 		AerialTypeParameterIcon = { fg = nord.nord10_gui },
-		AerialVariableIcon = { fg = nord.nord4_gui, style = "bold" },
+		AerialVariableIcon = { fg = nord.nord4_gui },
 
 		AerialArray = { fg = nord.nord13_gui },
-		AerialBoolean = { fg = nord.nord9_gui, style = "bold" },
+		AerialBoolean = { fg = nord.nord9_gui },
 		AerialClass = { fg = nord.nord9_gui },
 		AerialConstans = { fg = nord.nord13_gui },
 		AerialConstructor = { fg = nord.nord9_gui },
@@ -792,7 +791,7 @@ theme.loadPlugins = function()
 		AerialString = vim.g.nord_italic and { fg = nord.nord14_gui, style = "italic" } or { fg = nord.nord14_gui },
 		AerialStruct = { fg = nord.nord9_gui },
 		AerialTypeParameter = { fg = nord.nord10_gui },
-		AerialVariable = { fg = nord.nord4_gui, style = "bold" },
+		AerialVariable = { fg = nord.nord4_gui },
 	}
 	-- Options:
 
